@@ -9,4 +9,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'layouts/google_analytics'
-    = yield
+    .container
+        - flash.each do |key, value|
+            .alert.key class=("alert-#{key}") = value
+    = yield 
+

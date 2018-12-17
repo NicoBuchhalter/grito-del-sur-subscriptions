@@ -251,8 +251,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.6)
       mime-types (>= 1.16, < 4)
-    mercadopago-sdk (0.3.6)
-      json
     meta-tags (2.6.0)
       actionpack (>= 3.2.0, < 5.3)
     meta_request (0.4.3)
@@ -533,12 +531,12 @@ DEPENDENCIES
   foreman
   formulaic
   health_check (~> 3.0)
+  httparty
   inherited_resources!
   jbuilder (~> 2.5)
   jquery-rails
   launchy
   listen (~> 3.0.5)
-  mercadopago-sdk
   meta-tags
   meta_request
   metamagic

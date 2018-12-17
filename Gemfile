@@ -80,7 +80,7 @@ gem 'webpacker', '~> 3.0'
 
 gem 'health_check', '~> 3.0'
 
-gem 'mercadopago-sdk'
+gem 'httparty'
 
 group :development do
   # Gem to detect N+1 queries

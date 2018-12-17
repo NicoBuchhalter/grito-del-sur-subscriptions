@@ -51,6 +51,7 @@ $(document).ready ->
 	  event.preventDefault()
 	  if !doSubmit
 	    $form = document.querySelector('#pay')
+	    console.log($form)
 	    Mercadopago.createToken $form, sdkResponseHandler
 	    # The function "sdkResponseHandler" is defined below
 	    return false
@@ -58,7 +59,7 @@ $(document).ready ->
 
 	sdkResponseHandler = (status, response) ->
 	  if status != 200 and status != 201
-	    alert 'verify filled data'
+	    alert 'Hubo un error con su tarjeta. Verifique que haya ingresado los datos correctamente'
 	  else
 	    form = document.querySelector('#pay')
 	    card = document.createElement('input')

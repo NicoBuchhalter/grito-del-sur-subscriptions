@@ -1,33 +1,35 @@
-form#pay action="" method="post" name="pay" 
+form#pay action="/subscriptions" method="post" name="pay" 
   fieldset
     ul
       li
         label for="email"  Email
-        input#email name="email" type="email"
+        input#email required=true name="email" type="email"
       li
         label for="cardNumber"  Número de tarjeta de crédito:
-        input#cardNumber data-checkout="cardNumber" type="text"
+        input#cardNumber required=true data-checkout="cardNumber" type="text"
       li
         label for="securityCode"  Código de Ssguridad:
-        input#securityCode data-checkout="securityCode" type="text"
+        input#securityCode required=true data-checkout="securityCode" type="text"
       li
         label for="cardExpirationMonth"  Mes de expiración:
-        input#cardExpirationMonth data-checkout="cardExpirationMonth" type="text" 
+        input#cardExpirationMonth required=true data-checkout="cardExpirationMonth" type="text" 
       li
         label for="cardExpirationYear"  Año de expiración:
-        input#cardExpirationYear data-checkout="cardExpirationYear" type="text" 
+        input#cardExpirationYear required=true data-checkout="cardExpirationYear" type="text" 
       li
         label for="cardholderName"  Nombre como figura en la tarjeta:
-        input#cardholderName data-checkout="cardholderName" type="text"
+        input#cardholderName required=true data-checkout="cardholderName" type="text"
       li
         label for="docType"  Tipo de Documento:
         select#docType data-checkout="docType" 
       li
         label for="docNumber"  Número de Documento:
-        input#docNumber data-checkout="docNumber" type="text"
+        input#docNumber required=true data-checkout="docNumber" type="text"
     input type="submit" value="Suscribirse!"
 
 
 p#mp_token data=(Rails.application.secrets.mercado_pago[:public_key])
 
 script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"
+
+
