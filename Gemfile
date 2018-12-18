@@ -76,8 +76,6 @@ gem 'rack-cors', '~> 1.0.2', require: 'rack/cors'
 # Use for DoS attacks
 gem 'rack-attack'
 
-gem 'webpacker', '~> 3.0'
-
 gem 'health_check', '~> 3.0'
 
 gem 'httparty'
